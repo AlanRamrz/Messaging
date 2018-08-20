@@ -32,7 +32,7 @@ module Phone
   "" => "",
   }
 
-  def  Phone.translateMessage(input)
+  def Phone.translateMessage(input)
     key = ""
     actualNumber = ""
     output = ""

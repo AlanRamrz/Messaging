@@ -1,4 +1,5 @@
 module Phone
+
   TRANSLATE = {
   "2" => "a",
   "22" => "b",
@@ -30,4 +31,29 @@ module Phone
   " " => "",
   "" => "",
   }
+
+  def  Phone.translateMessage(input)
+    key = ""
+    actualNumber = ""
+    output = ""
+
+    inputArray = input.split('')
+
+    inputArray.each do |val|
+
+      if val != actualNumber
+        output << TRANSLATE[key]
+        actualNumber = ""
+        key = ""
+        actualNumber << val
+        key << val
+      else
+        key << val
+      end
+
+    end
+
+    output << TRANSLATE[key]
+  end
+
 end
